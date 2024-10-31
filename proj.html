@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Boxes</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .rotate-360 {
+      transform: rotate(360deg);
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <div id="assignment" class="flex flex-col items-center bg-purple-900 text-white py-10 px-4">
+    <h2 class="text-4xl font-bold mb-8">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Service Box 1 -->
+      <div class="service-box bg-white text-gray-800 rounded-lg p-6 shadow-lg transform hover:rotate-360">
+        <div class="flex flex-col items-center">
+          <img src="emergency.png" alt="Emergency Plumbing Icon" class="mb-4 w-20 h-20 rounded-full">
+          <h3 class="text-xl font-semibold">Emergency Plumbing Services</h3>
+          <p class="text-center mt-2">Our plumbers are ready to go 24/7 for emergencies - including nights, weekends, and holidays.</p>
+          <a href="#" class="text-purple-900 font-semibold mt-4">Explore This Service &gt;</a>
+        </div>
+      </div>
+      
+      <!-- Service Box 2 -->
+      <div class="service-box bg-white text-gray-800 rounded-lg p-6 shadow-lg transform hover:rotate-360">
+        <div class="flex flex-col items-center">
+          <img src="plumbing1.png" alt="Plumbing and Drains Icon" class="mb-4 w-20 h-20 rounded-full">
+          <h3 class="text-xl font-semibold">Plumbing and Drains</h3>
+          <p class="text-center mt-2">As the largest plumbing and drain service company, we make thousands of repairs every day.</p>
+          <a href="#" class="text-purple-900 font-semibold mt-4">Explore This Service &gt;</a>
+        </div>
+      </div>
+
+      <!-- Service Box 3 -->
+      <div class="service-box bg-white text-gray-800 rounded-lg p-6 shadow-lg transform hover:rotate-360">
+        <div class="flex flex-col items-center">
+          <img src="water1.png" alt="Water Damage Icon" class="mb-4 w-20 h-20 rounded-full">
+          <h3 class="text-xl font-semibold">Water Damage</h3>
+          <p class="text-center mt-2">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+          <a href="#" class="text-purple-900 font-semibold mt-4">Explore This Service &gt;</a>
+        </div>
+      </div>
+
+      <!-- Service Box 4 -->
+      <div class="service-box bg-white text-gray-800 rounded-lg p-6 shadow-lg transform hover:rotate-360">
+        <div class="flex flex-col items-center">
+          <img src="heaters.png" alt="Water Heaters Icon" class="mb-4 w-20 h-20 rounded-full">
+          <h3 class="text-xl font-semibold">Water Heaters</h3>
+          <p class="text-center mt-2">Trust Roto-Rooter for repair and replacement of gas, electric, and tankless water heaters.</p>
+          <a href="#" class="text-purple-900 font-semibold mt-4">Explore This Service &gt;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.service-box').forEach((box) => {
+      box.addEventListener('mouseenter', () => {
+        anime({
+          targets: box,
+          rotate: '1turn',
+          duration: 1000,
+          easing: 'easeInOutQuad'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
